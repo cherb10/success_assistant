@@ -1,0 +1,1 @@
+// Auto-generated Hive adapter (placeholder)

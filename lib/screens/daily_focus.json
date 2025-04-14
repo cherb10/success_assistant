@@ -1,0 +1,1 @@
+{"type": "daily_focus", "version": "1.0", "title": "Daily Focus", "questions": [{"id": "top_3_tasks", "prompt": "What are your top 3 tasks for today?", "type": "text_list", "max_items": 3}, {"id": "potential_barriers", "prompt": "What might get in your way today?", "type": "text"}, {"id": "how_to_show_up", "prompt": "How will you show up today?", "type": "text"}]}
