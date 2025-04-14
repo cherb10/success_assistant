@@ -1,16 +1,44 @@
-# success_assistant
+# Success Assistant
 
-A new Flutter project.
+**Success Assistant** is a personal productivity app designed to help you manage your goals, structure your time, and maintain your focus with purpose-driven tools.
+
+## Features
+
+- 🗓️ Weekly Check-In
+- ✅ Daily Focus
+- 📋 Task List Management
+- 🔄 Hive Local Storage
+- 🧭 Future integration with other sidekick apps (like C-Dub)
+
+## Tech Stack
+
+- Flutter
+- Dart
+- Hive for local persistence
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Clone the repository.
+2. Run `flutter pub get` to install dependencies.
+3. Run the app using `flutter run`.
 
-A few resources to get you started if this is your first Flutter project:
+## Folder Structure
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```
+lib/
+├── core/          # Routing and themes
+├── models/        # Hive data models
+├── screens/       # UI screens
+├── widgets/       # Reusable widgets
+main.dart          # App entry point
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## To Do
+
+- Implement detailed check-in UIs
+- Add task management features
+- Add user onboarding
+
+---
+
+Created with ❤️ to help you win the day, every day.

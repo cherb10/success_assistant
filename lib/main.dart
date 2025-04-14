@@ -1,27 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart';
-import 'core/router.dart';
-import 'models/task.dart';
+import 'package:success_assistant/screens/home_screen.dart';
+import 'package:success_assistant/screens/weekly_checkin_screen.dart';
+import 'package:success_assistant/core/themes.dart';
+import 'package:success_assistant/core/locator.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Hive.initFlutter();
-  Hive.registerAdapter(TaskAdapter());
-  await Hive.openBox<Task>('tasks');
-
-  runApp(SuccessAssistantApp());
+  await setupLocator();
+  runApp(const SuccessAssistantApp());
 }
 
 class SuccessAssistantApp extends StatelessWidget {
+  const SuccessAssistantApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Success Assistant',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: AppThemes.lightTheme,
+      darkTheme: AppThemes.darkTheme,
+      themeMode: ThemeMode.system,
       initialRoute: '/',
-      onGenerateRoute: AppRouter.generateRoute,
+      routes: {
+        '/': (context) => const HomeScreen(),
+        '/weekly-checkin': (context) => const WeeklyCheckInScreen(),
+      },
     );
   }
 }
